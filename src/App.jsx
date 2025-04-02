@@ -1,11 +1,19 @@
+import { Routes, Route } from "react-router-dom"
+import { Home } from "./components/Home"
+import { About } from "./components/About"
+import Header from "./components/header/Header"
+import SectionA from "./components/sectionA/SectionA"
+
 function App() {
 
   return (
     <>
-      <div>
-        <h1>Zioty</h1>
-        <p>Crée votre site tout simplement</p>
-      </div>
+      <Header />
+      <SectionA />
+      <Routes>
+        <Route path="site-free" element={<Home />}></Route>
+        <Route path="site-free/about" element={<About />}></Route>
+      </Routes>
     </>
   )
 }
